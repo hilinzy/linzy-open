@@ -1,0 +1,6 @@
+io.github.hilinzy.mongo.annotation
+io.github.hilinzy.mongo.aop
+io.github.hilinzy.mongo.builders
+io.github.hilinzy.mongo.document
+io.github.hilinzy.mongo.service
+io.github.hilinzy.mongo.wrappers

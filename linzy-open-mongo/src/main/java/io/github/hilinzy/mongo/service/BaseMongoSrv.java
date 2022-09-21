@@ -241,10 +241,6 @@ public class BaseMongoSrv<T> {
       try {
         field.setAccessible(true);
         String name = field.getName();
-       /* if(name.equals("serialVersionUID"))continue;//这个是mongo自带的一个属性
-        String filedName = name.replaceFirst(name.charAt(0) + "", (name.charAt(0) + "").toUpperCase());
-        Method method = clz.getDeclaredMethod("get" + filedName);
-        Object invoke = method.invoke(t);*/
         Object invoke = field.get(t);
         if(ObjectUtil.isNotEmpty(field.getAnnotation(MongoId.class))){
           Criteria criteria = Criteria.where(name).is(invoke);

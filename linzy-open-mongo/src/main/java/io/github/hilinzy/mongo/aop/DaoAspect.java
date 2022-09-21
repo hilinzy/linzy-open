@@ -34,7 +34,7 @@ public class DaoAspect {
   @Resource
   IncrIdSrv incrIdSrv;
 
-  @Pointcut("execution(public * com.lazy.mongo.service.BaseMongoSrv.*save*(..))")
+  @Pointcut("execution(public * io.github.hilinzy.mongo.service.BaseMongoSrv.*save*(..))")
   public void doSave() {
 
   }
