@@ -2,9 +2,13 @@ package io.github.hilinzy.mongo.service;
 
 import cn.hutool.core.util.ObjectUtil;
 
+import cn.hutool.core.util.PageUtil;
 import com.mongodb.bulk.BulkWriteResult;
 import com.mongodb.client.result.DeleteResult;
+import io.github.hilinzy.common.result.PageResult;
+import io.github.hilinzy.mongo.result.MongoPageResult;
 import io.github.hilinzy.mongo.wrappers.MongoQueryWrapper;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.mongodb.core.BulkOperations;
 import org.springframework.data.mongodb.core.FindAndModifyOptions;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -194,6 +198,28 @@ public class BaseMongoSrv<T> {
     return mongoTemplate.findOne(query, clz);
   }
 
+  /**
+   * 分页查询
+   */
+  public MongoPageResult<T> page(Integer page,Integer pageSize){
+    Class<T> baseClass = this.getBaseClass();
+    MongoQueryWrapper<T> queryWrapper = MongoQueryWrapper.build(baseClass);
+   return this.page(queryWrapper,page,pageSize);
+  }
+  public MongoPageResult<T> page(MongoQueryWrapper<T> mongoQueryWrapper, Integer page, Integer pageSize){
+    Long count = this.count(mongoQueryWrapper);
+    Query query = mongoQueryWrapper.getQuery();
+    PageRequest pageRequest = PageRequest.of(page-1, pageSize);
+    query.with(pageRequest);
+    List<T> list = this.find(mongoQueryWrapper);
+    MongoPageResult<T> result = new MongoPageResult<>();
+    result.setList(list);
+    Integer totalPage = PageUtil.totalPage(Math.toIntExact(count), pageSize);
+    result.setTotalPage(totalPage);
+    result.setPage(pageSize);
+    result.setCount(count);
+    return result;
+  }
   /**
    *聚合查询
    */
