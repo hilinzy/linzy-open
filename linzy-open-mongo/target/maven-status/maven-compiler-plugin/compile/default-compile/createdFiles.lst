@@ -1,5 +1,6 @@
 io\github\hilinzy\mongo\service\IncrIdSrv.class
 io\github\hilinzy\mongo\document\Incr.class
+io\github\hilinzy\mongo\result\MongoPageResult.class
 io\github\hilinzy\mongo\wrappers\MongoQueryWrapper.class
 io\github\hilinzy\mongo\annotation\IncrId.class
 io\github\hilinzy\mongo\aop\DaoAspect.class
