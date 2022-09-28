@@ -1,8 +1,8 @@
 package io.github.hilinzy.mongo.wrappers;
 
 import cn.hutool.core.util.ArrayUtil;
-import io.github.hilinzy.common.ext.ColumnUtil;
-import io.github.hilinzy.common.ext.MyFunction;
+import io.github.hilinzy.common.utils.ColumnUtil;
+import io.github.hilinzy.common.annotation.MyFunction;
 import lombok.Getter;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;

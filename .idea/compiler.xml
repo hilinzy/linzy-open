@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="linzy-open-mongo" />
         <module name="linzy-open-common" />
+        <module name="linzy-open-es" />
       </profile>
     </annotationProcessing>
   </component>

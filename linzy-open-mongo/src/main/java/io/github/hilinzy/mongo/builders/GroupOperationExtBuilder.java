@@ -1,7 +1,7 @@
 package io.github.hilinzy.mongo.builders;
 
-import io.github.hilinzy.common.ext.ColumnUtil;
-import io.github.hilinzy.common.ext.MyFunction;
+import io.github.hilinzy.common.utils.ColumnUtil;
+import io.github.hilinzy.common.annotation.MyFunction;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.aggregation.GroupOperation;

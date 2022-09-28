@@ -1,8 +1,8 @@
 package io.github.hilinzy.mongo.builders;
 
 import cn.hutool.core.collection.CollUtil;
-import io.github.hilinzy.common.ext.ColumnUtil;
-import io.github.hilinzy.common.ext.MyFunction;
+import io.github.hilinzy.common.utils.ColumnUtil;
+import io.github.hilinzy.common.annotation.MyFunction;
 import org.springframework.data.mongodb.core.aggregation.*;
 import org.springframework.data.mongodb.core.query.Criteria;
 

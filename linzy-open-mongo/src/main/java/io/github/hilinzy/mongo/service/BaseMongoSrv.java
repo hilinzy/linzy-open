@@ -216,7 +216,7 @@ public class BaseMongoSrv<T> {
     result.setList(list);
     Integer totalPage = PageUtil.totalPage(Math.toIntExact(count), pageSize);
     result.setTotalPage(totalPage);
-    result.setPage(pageSize);
+    result.setPage(page);
     result.setCount(count);
     return result;
   }

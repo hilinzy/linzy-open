@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/linzy-open-common/pom.xml" />
         <option value="$PROJECT_DIR$/linzy-open-mongo/pom.xml" />
+        <option value="$PROJECT_DIR$/linzy-open-es/pom.xml" />
       </list>
     </option>
   </component>

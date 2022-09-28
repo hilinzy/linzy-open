@@ -1,6 +1,5 @@
 package io.github.hilinzy.common.result;
 
-import io.github.hilinzy.common.exception.ErrorCode;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -44,10 +43,6 @@ public class Result<T> implements Serializable {
 
   public static Result<?> success() {
     return Result.success(null);
-  }
-
-  public static Result<?> error(ErrorCode errorCode) {
-    return new Result(errorCode.getCode(), errorCode.getMessage(), null);
   }
 
   public static Result<?> error(String errorMsg) {

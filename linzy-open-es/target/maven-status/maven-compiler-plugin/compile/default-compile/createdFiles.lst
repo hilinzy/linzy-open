@@ -1,0 +1,8 @@
+io\github\hilinzy\es\service\BaseEsSrv.class
+io\github\hilinzy\es\wrappers\bool\EsBoolShould.class
+io\github\hilinzy\es\wrappers\bool\EsBoolQueryWrapper.class
+io\github\hilinzy\es\wrappers\aggregation\EsAggregationQueryWrapper.class
+io\github\hilinzy\es\wrappers\bool\EsBoolFilter.class
+io\github\hilinzy\es\wrappers\EsQueryWrapper.class
+io\github\hilinzy\es\wrappers\bool\EsBoolMust.class
+io\github\hilinzy\es\wrappers\bool\EsBoolMustNot.class
